@@ -16,6 +16,8 @@
         ],
         "animations": {
             "sub": [0],
+            "cloud": [0],
+            "island": [0],
             "instructionsButton": [1],
             "playButton": [2],
             "tryAgainButton": [3]
