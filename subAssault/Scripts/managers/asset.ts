@@ -2,7 +2,7 @@
     // Image and Sound Manifest;
     var assetManifest = [
         { id: "loading", src: "assets/images/loading.jpg" },
-        { id: "ocean", src: "assets/images/ocean.gif" },
+        { id: "ocean", src: "assets/images/ocean.png" },
         { id: "engine", src: "assets/sounds/engine.ogg" },
         { id: "thunder", src: "assets/sounds/thunder.ogg" },
         { id: "yay", src: "assets/sounds/yay.ogg" }
@@ -12,6 +12,12 @@
     var spriteSheetData = {
         "images": ["assets/images/atlas.png"],
         "frames": [
+            [2, 2, 200, 96]
+        ],
+        "animations": {
+            "plane": [0]
+        }
+        /*"frames": [
             [2, 2, 226, 178],
             [230, 2, 211, 69],
             [443, 69, 62, 63],
@@ -27,6 +33,7 @@
             "playButton": [4],
             "tryAgainButton": [5]
         }
+        */
     }
 
     // Asset Manager Class

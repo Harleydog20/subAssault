@@ -22,14 +22,14 @@ module objects {
         }
 
         update() {
-            this.image.y += this.dy;
-            if (this.image.y >= 0) {
+            this.image.x -= this.dy;
+            if (this.image.x <= -900) {
                 this.reset();
             }
         }
 
         reset() {
-            this.image.y = -960;
+            this.image.x = 0;
         }
 
         destroy() {
