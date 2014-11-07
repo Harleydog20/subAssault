@@ -119,7 +119,7 @@
     <TypeScriptCompile Include="Scripts\objects\island.ts" />
     <TypeScriptCompile Include="Scripts\objects\label.ts" />
     <TypeScriptCompile Include="Scripts\objects\ocean.ts" />
-    <TypeScriptCompile Include="Scripts\objects\plane.ts" />
+    <TypeScriptCompile Include="Scripts\objects\sub.ts" />
     <TypeScriptCompile Include="Scripts\objects\scoreboard.ts" />
     <TypeScriptCompile Include="Scripts\lib\preloadjs.d.ts" />
     <TypeScriptCompile Include="Scripts\lib\soundjs.d.ts" />
