@@ -1,21 +1,24 @@
 ﻿module managers {
     // Image and Sound Manifest;
     var assetManifest = [
-        { id: "loading", src: "assets/images/loading.jpg" },
         { id: "ocean", src: "assets/images/ocean.png" },
-        { id: "engine", src: "assets/sounds/engine.ogg" },
-        { id: "thunder", src: "assets/sounds/thunder.ogg" },
-        { id: "yay", src: "assets/sounds/yay.ogg" }
+        { id: "engine", src: "assets/sounds/engine.ogg" }
     ];
 
     // SpriteSheet Data Object
     var spriteSheetData = {
         "images": ["assets/images/atlas.png"],
         "frames": [
-            [2, 2, 200, 96]
+            [620, 2, 100, 48],
+            [2, 2, 204, 60],
+            [208, 2, 204, 59],
+            [414, 2, 204, 59]
         ],
         "animations": {
-            "sub": [0]
+            "sub": [0],
+            "instructionsButton": [1],
+            "playButton": [2],
+            "tryAgainButton": [3]
         }
         /*"frames": [
             [2, 2, 226, 178],
