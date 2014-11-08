@@ -1,4 +1,4 @@
-﻿/// <reference path="../objects/cloud.ts" />
+﻿/// <reference path="../objects/whale.ts" />
 /// <reference path="../objects/island.ts" />
 /// <reference path="../objects/sub.ts" />
 /// <reference path="../objects/scoreboard.ts" />
@@ -9,13 +9,13 @@ module managers {
         // class variables
         private sub: objects.Sub;
         private island: objects.Island;
-        private clouds = [];
+        private whales = [];
         private scoreboard: objects.Scoreboard;
 
-        constructor(plane: objects.Sub, island: objects.Island, clouds, scoreboard: objects.Scoreboard) {
-            this.sub = plane;
+        constructor(sub: objects.Sub, island: objects.Island, whales, scoreboard: objects.Scoreboard) {
+            this.sub = sub;
             this.island = island;
-            this.clouds = clouds;
+            this.whales = whales;
             this.scoreboard = scoreboard;
         }
 
@@ -36,18 +36,18 @@ module managers {
             return result;
         }
 
-        // check collision between plane and any cloud object
-        private planeAndCloud(cloud: objects.Cloud) {
+        // check collision between plane and any whale object
+        private subAndWhale(whale: objects.Whale) {
             var p1: createjs.Point = new createjs.Point();
             var p2: createjs.Point = new createjs.Point();
             p1.x = this.sub.image.x;
             p1.y = this.sub.image.y;
-            p2.x = cloud.image.x;
-            p2.y = cloud.image.y;
-            if (this.distance(p1, p2) < ((this.sub.height / 2) + (cloud.height / 2))) {
+            p2.x = whale.image.x;
+            p2.y = whale.image.y;
+            if (this.distance(p1, p2) < ((this.sub.height / 2) + (whale.height / 2))) {
                 createjs.Sound.play("thunder");
                 this.scoreboard.lives -= 1;
-                cloud.reset();
+                whale.reset();
             }
         }
 
@@ -69,8 +69,8 @@ module managers {
 
         // Utility Function to Check Collisions
         update() {
-            for (var count = 0; count < constants.CLOUD_NUM; count++) {
-                this.planeAndCloud(this.clouds[count]);
+            for (var count = 0; count < constants.WHALE_NUM; count++) {
+                this.subAndWhale(this.whales[count]);
             }
             this.subAndIsland();
         }

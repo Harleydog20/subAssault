@@ -1,6 +1,6 @@
 ﻿/// <reference path="constants.ts" />
 /// <reference path="managers/asset.ts" />
-/// <reference path="objects/cloud.ts" />
+/// <reference path="objects/whale.ts" />
 /// <reference path="objects/island.ts" />
 /// <reference path="objects/ocean.ts" />
 /// <reference path="objects/sub.ts" />
@@ -19,7 +19,7 @@ var game: createjs.Container;
 var ocean: objects.Ocean;
 var sub: objects.Sub;
 var island: objects.Island;
-var clouds = [];
+var whales = [];
 var scoreboard: objects.Scoreboard;
 
 var collision: managers.Collision;

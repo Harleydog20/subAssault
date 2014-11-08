@@ -2,7 +2,7 @@
     // Image and Sound Manifest;
     var assetManifest = [
         { id: "ocean", src: "assets/images/ocean.png" },
-        { id: "engine", src: "assets/sounds/engine.ogg" }
+        { id: "engine1", src: "assets/sounds/engine.ogg" }
     ];
 
     // SpriteSheet Data Object
@@ -12,11 +12,17 @@
             [620, 2, 100, 48],
             [2, 2, 204, 60],
             [208, 2, 204, 59],
-            [414, 2, 204, 59]
+            [414, 2, 204, 59],
+            [722, 31, 62, 27],
+            [722, 2, 63, 27],
+            [786, 31, 62, 27]
         ],
         "animations": {
             "sub": [0],
-            "cloud": [0],
+            "whale": {
+                frames: [5, 6, 5, 4],
+                speed: 0.2
+            },
             "island": [0],
             "instructionsButton": [1],
             "playButton": [2],
