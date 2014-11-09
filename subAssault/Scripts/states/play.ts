@@ -7,6 +7,7 @@
 /// <reference path="../objects/scoreboard.ts" />
 /// <reference path="../managers/collision.ts" />
 module states {
+    var music;
     export function playState() {
         ocean.update();
         island.update();
@@ -20,6 +21,7 @@ module states {
         scoreboard.update();
 
         if (scoreboard.lives <= 0) {
+            music.stop();
             stage.removeChild(game);
             sub.destroy();
             game.removeAllChildren();
@@ -33,6 +35,9 @@ module states {
     export function play(): void {
         // Declare new Game Container
         game = new createjs.Container();
+
+        //Add background music
+        music = createjs.Sound.play('playMusic', createjs.Sound.INTERRUPT_NONE, 0, 0, -1, 1, 0);
 
         // Instantiate Game Objects
         ocean = new objects.Ocean(stage, game);

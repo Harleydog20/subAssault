@@ -7,12 +7,14 @@
 /// <reference path="../objects/sub.ts" />
 /// <reference path="../objects/scoreboard.ts" />
 module states {
+    var music;
     export function gameOverState() {
         ocean.update();
     }
 
     // Restart Game when Try Again Button is clicked
     export function tryAgainClicked(event: MouseEvent) {
+        music.stop();
         stage.removeChild(game);
         game.removeAllChildren();
         game.removeAllEventListeners();
@@ -28,6 +30,9 @@ module states {
 
         // Declare new Game Container
         game = new createjs.Container();
+
+        //Add background music
+        music = createjs.Sound.play('gameOverMusic', createjs.Sound.INTERRUPT_NONE, 0, 0, -1, 1, 0);
 
         // Instantiate Game Objects
         ocean = new objects.Ocean(stage, game);

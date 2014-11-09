@@ -4,6 +4,7 @@
         { id: "ocean", src: "assets/images/ocean.png" },
         { id: "startMusic", src: "assets/sounds/startScreen.wav" },
         { id: "playMusic", src: "assets/sounds/playScreen.wav" },
+        { id: "gameOverMusic", src: "assets/sounds/gameOverScreen.wav" },
         { id: "bossMusic", src: "assets/sounds/bossScreen.wav" }
     ];
 
@@ -30,23 +31,7 @@
             "playButton": [2],
             "tryAgainButton": [3]
         }
-        /*"frames": [
-            [2, 2, 226, 178],
-            [230, 2, 211, 69],
-            [443, 69, 62, 63],
-            [443, 2, 65, 65],
-            [230, 73, 211, 69],
-            [230, 144, 211, 69]
-        ],
-        "animations": {
-            "cloud": [0],
-            "instructionsButton": [1],
-            "island": [2],
-            "plane": [3],
-            "playButton": [4],
-            "tryAgainButton": [5]
-        }
-        */
+       
     }
 
     // Asset Manager Class

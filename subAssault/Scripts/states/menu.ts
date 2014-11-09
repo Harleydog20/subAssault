@@ -6,9 +6,10 @@
 /// <reference path="../objects/whale.ts" />
 /// <reference path="../objects/button.ts" />
 /// <reference path="../objects/label.ts" />
-module states {    
+module states {  
+    var music;  
     export function playButtonClicked(event: MouseEvent) {
-        //this.music.stop();
+        music.stop();
         stage.removeChild(game);        
         for (var count = 0; count < constants.WHALE_NUM; count++) {
             whales[count].destroy();
@@ -33,8 +34,7 @@ module states {
         game = new createjs.Container();
 
         //Add background music
-        music: createjs.SoundInstance;
-        this.music = createjs.Sound.play('startMusic', createjs.Sound.INTERRUPT_NONE, 0, 0, -1, 1, 0);
+        music = createjs.Sound.play('startMusic', createjs.Sound.INTERRUPT_NONE, 0, 0, -1, 1, 0);
 
         // Instantiate Game Objects
         ocean = new objects.Ocean(stage, game);
