@@ -9,4 +9,5 @@
     export var LABEL_FONT = "40px Consolas";
     export var LABEL_COLOUR = "#FFFF00";
     export var SUB_LIVES = 3;
+    export var OCEAN_FLOOR: number = 80;
 }

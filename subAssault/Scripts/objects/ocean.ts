@@ -23,7 +23,7 @@ module objects {
 
         update() {
             this.image.x -= this.dy;
-            if (this.image.x <= -900) {
+            if (this.image.x <= -(this.width - this.stage.canvas.width)) {
                 this.reset();
             }
         }

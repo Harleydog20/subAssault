@@ -1,4 +1,6 @@
 ﻿/// <reference path="../managers/asset.ts" />
+/// <reference path="../constants.ts" />
+
 module objects {
     // Whale class
     export class Whale {
@@ -8,6 +10,7 @@ module objects {
         width: number;
         height: number;
         dx: number;
+        dy: number;
         constructor(stage: createjs.Stage, game: createjs.Container) {
             this.stage = stage;
             this.game = game;
@@ -23,14 +26,22 @@ module objects {
 
         update() {
             this.image.x -= this.dx;
+            this.image.y += this.dy;
             if (this.image.x < 0 - this.width) {
                 this.reset();
+            }
+            if (this.image.y >= this.stage.canvas.height - constants.OCEAN_FLOOR) {
+                this.dy = 0;
+            }
+            if (this.image.y <= 0) {
+                this.dy = 0;
             }
         }
 
         reset() {
-            this.image.y = Math.floor(Math.random() * this.stage.canvas.height);
+            this.image.y = Math.floor(Math.random() * (this.stage.canvas.height - constants.OCEAN_FLOOR));
             this.dx = Math.floor(Math.random() * 5 + 5);
+            this.dy = Math.floor(Math.random() * -3) + Math.floor(Math.random() * 3);
             this.image.x = this.stage.canvas.width + this.width;
         }
 

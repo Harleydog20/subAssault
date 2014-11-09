@@ -62,7 +62,6 @@
     <Content Include="assets\images\1945.bmp" />
     <Content Include="assets\images\atlas.png" />
     <Content Include="assets\images\ocean.png" />
-    <Content Include="assets\images\ocean2.png" />
     <Content Include="assets\sounds\yay.ogg" />
     <Content Include="assets\sounds\thunder.ogg" />
     <Content Include="assets\sounds\engine.ogg" />
