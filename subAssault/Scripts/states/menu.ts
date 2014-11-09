@@ -6,10 +6,13 @@
 /// <reference path="../objects/whale.ts" />
 /// <reference path="../objects/button.ts" />
 /// <reference path="../objects/label.ts" />
-module states {
+module states {    
     export function playButtonClicked(event: MouseEvent) {
-        stage.removeChild(game);
-        sub.destroy();
+        //this.music.stop();
+        stage.removeChild(game);        
+        for (var count = 0; count < constants.WHALE_NUM; count++) {
+            whales[count].destroy();
+        }        
         game.removeAllChildren();
         game.removeAllEventListeners();
         currentState = constants.PLAY_STATE;
@@ -18,7 +21,9 @@ module states {
 
     export function menuState() {
         ocean.update();
-        sub.update();
+        for (var count = 0; count < constants.WHALE_NUM; count++) {
+            whales[count].update();
+        }
     }
 
     export function menu() {
@@ -27,9 +32,15 @@ module states {
         // Declare new Game Container
         game = new createjs.Container();
 
+        //Add background music
+        music: createjs.SoundInstance;
+        this.music = createjs.Sound.play('startMusic', createjs.Sound.INTERRUPT_NONE, 0, 0, -1, 1, 0);
+
         // Instantiate Game Objects
         ocean = new objects.Ocean(stage, game);
-        sub = new objects.Sub(stage, game);
+        for (var count = 0; count < constants.WHALE_NUM; count++) {
+            whales[count] = new objects.Whale(stage, game);
+        }
 
         // Show Cursor
         stage.cursor = "default";

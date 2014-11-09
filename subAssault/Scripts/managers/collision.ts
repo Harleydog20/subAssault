@@ -36,7 +36,7 @@ module managers {
             return result;
         }
 
-        // check collision between plane and any whale object
+        // check collision between sub and any whale object
         private subAndWhale(whale: objects.Whale) {
             var p1: createjs.Point = new createjs.Point();
             var p2: createjs.Point = new createjs.Point();

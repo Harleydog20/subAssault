@@ -2,7 +2,9 @@
     // Image and Sound Manifest;
     var assetManifest = [
         { id: "ocean", src: "assets/images/ocean.png" },
-        { id: "engine1", src: "assets/sounds/engine.ogg" }
+        { id: "startMusic", src: "assets/sounds/startScreen.wav" },
+        { id: "playMusic", src: "assets/sounds/playScreen.wav" },
+        { id: "bossMusic", src: "assets/sounds/bossScreen.wav" }
     ];
 
     // SpriteSheet Data Object

@@ -5,7 +5,7 @@ module objects {
         image: createjs.Sprite;
         stage: createjs.Stage;
         game: createjs.Container;
-        engineSound: createjs.SoundInstance;
+        //music: createjs.SoundInstance;
         width: number;
         height: number;
         constructor(stage: createjs.Stage, game: createjs.Container) {
@@ -17,7 +17,7 @@ module objects {
             this.image.regX = this.width / 2;
             this.image.regY = this.height / 2;
             game.addChild(this.image);
-            this.engineSound = createjs.Sound.play('engine', createjs.Sound.INTERRUPT_NONE, 0, 0, -1, 1, 0);
+            //this.music = createjs.Sound.play('playMusic', createjs.Sound.INTERRUPT_NONE, 0, 0, -1, 1, 0);
         }
 
 
@@ -30,7 +30,7 @@ module objects {
             }            
         }
         destroy() {
-            this.engineSound.stop();
+            //this.music.stop();
             game.removeChild(this.image);
         }
     }

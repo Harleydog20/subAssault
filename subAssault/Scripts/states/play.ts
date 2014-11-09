@@ -42,7 +42,7 @@ module states {
         // Show Cursor
         stage.cursor = "none";
 
-        // Create multiple clouds
+        // Create multiple whales
         for (var count = 0; count < constants.WHALE_NUM; count++) {
             whales[count] = new objects.Whale(stage, game);
         }
