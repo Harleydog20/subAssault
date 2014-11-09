@@ -23,7 +23,11 @@ module objects {
 
         update() {
             this.image.x = this.stage.mouseX;
-            this.image.y = this.stage.mouseY;
+            if (this.stage.mouseY <= this.stage.canvas.height - constants.OCEAN_FLOOR) {
+                this.image.y = this.stage.mouseY;
+            } else {
+                this.image.y = this.stage.canvas.height - constants.OCEAN_FLOOR;
+            }            
         }
         destroy() {
             this.engineSound.stop();
