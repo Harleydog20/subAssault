@@ -14,6 +14,14 @@
         "images": ["assets/images/atlas.png"],
         "frames": [
             [620, 2, 100, 48],
+            [1007, 2, 30, 32],
+            [1039, 2, 30, 32],
+            [1071, 2, 30, 32],
+            [1103, 2, 30, 32],
+            [1135, 2, 30, 32],
+            [1167, 2, 30, 32],
+            [1199, 2, 30, 32],
+            [1231, 2, 30, 32],
             [2, 2, 204, 60],
             [208, 2, 204, 59],
             [414, 2, 204, 59],
@@ -22,15 +30,18 @@
             [912, 2, 93, 41]
         ],
         "animations": {
-            "sub": [0],
-            "whale": {
-                frames: [5, 6, 5, 4],
-                speed: 0.2
+            "Submarine": [0],
+            "coin": {
+                frames: [1, 2, 3, 4, 5, 6, 7, 8],
+                speed: 0.5
             },
-            "island": [0],
-            "instructionsButton": [1],
-            "playButton": [2],
-            "tryAgainButton": [3]
+            "int": [9],
+            "playButton": [10],
+            "tryAgainButton": [11],
+            "whale": {
+                frames: [13, 14, 13, 12],
+                speed: 0.2
+            }
         }
        
     }
