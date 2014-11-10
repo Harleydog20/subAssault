@@ -26,6 +26,8 @@ var collision: managers.Collision;
 
 var tryAgain: objects.Button;
 var playButton: objects.Button;
+var instructionButton: objects.Button;
+var backButton: objects.Button;
 
 var currentState: number;
 var currentStateFunction;
@@ -80,6 +82,12 @@ function changeState(state: number): void {
             currentStateFunction = states.gameOverState;
             // instantiate game over screen
             states.gameOver();
+            break;
+
+        case constants.INSTRUCTION_STATE:
+            currentStateFunction = states.instructionState;
+            // instantiate game over screen
+            states.instructions();
             break;
     }
 }

@@ -20,6 +20,18 @@ module states {
         changeState(currentState);
     }
 
+    export function instructionButtonClicked(event: MouseEvent) {
+        //music.stop();
+        stage.removeChild(game);
+        for (var count = 0; count < constants.WHALE_NUM; count++) {
+            whales[count].destroy();
+        }
+        game.removeAllChildren();
+        game.removeAllEventListeners();
+        currentState = constants.INSTRUCTION_STATE;
+        changeState(currentState);
+    }
+
     export function menuState() {
         ocean.update();
         for (var count = 0; count < constants.WHALE_NUM; count++) {
@@ -45,14 +57,19 @@ module states {
         // Show Cursor
         stage.cursor = "default";
 
-        // Display Game Over
+        // Display Game Title
         gameNameLabel = new objects.Label(stage.canvas.width / 2, 40, "SUB ASSAULT");
         game.addChild(gameNameLabel);
 
-        // Display Play Again Button
+        // Display Play Button
         playButton = new objects.Button(stage.canvas.width / 2, 300, "playButton");
         game.addChild(playButton);
         playButton.addEventListener("click", playButtonClicked);
+
+        // Display Instruction Button
+        instructionButton = new objects.Button(stage.canvas.width / 2, 375, "instructionButton");
+        game.addChild(instructionButton);
+        instructionButton.addEventListener("click", instructionButtonClicked);
 
         stage.addChild(game);
     }

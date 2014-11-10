@@ -45,7 +45,7 @@ module managers {
             p2.x = whale.image.x;
             p2.y = whale.image.y;
             if (this.distance(p1, p2) < ((this.sub.height / 2) + (whale.height / 2))) {
-                createjs.Sound.play("thunder");
+                createjs.Sound.play("explosionSound");
                 this.scoreboard.lives -= 1;
                 whale.reset();
             }
