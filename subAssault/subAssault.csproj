@@ -63,6 +63,7 @@
     <Content Include="assets\images\atlas.png" />
     <Content Include="assets\images\ocean.png" />
     <Content Include="assets\sounds\bossScreen.wav" />
+    <Content Include="assets\sounds\coin.wav" />
     <Content Include="assets\sounds\gameOverScreen.wav" />
     <Content Include="assets\sounds\playScreen.wav" />
     <Content Include="assets\sounds\startScreen.wav" />

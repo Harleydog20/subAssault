@@ -51,7 +51,7 @@ module managers {
             }
         }
 
-        // check collision between plane and island
+        // check collision between sub and island
         private subAndIsland() {
             var p1: createjs.Point = new createjs.Point();
             var p2: createjs.Point = new createjs.Point();
@@ -61,7 +61,7 @@ module managers {
             p2.x = this.island.image.x;
             p2.y = this.island.image.y;
             if (this.distance(p1, p2) < ((this.sub.height / 2) + (this.island.height / 2))) {
-                createjs.Sound.play("yay");
+                createjs.Sound.play("coinSound");
                 this.scoreboard.score += 100;
                 this.island.reset();
             }

@@ -5,7 +5,8 @@
         { id: "startMusic", src: "assets/sounds/startScreen.wav" },
         { id: "playMusic", src: "assets/sounds/playScreen.wav" },
         { id: "gameOverMusic", src: "assets/sounds/gameOverScreen.wav" },
-        { id: "bossMusic", src: "assets/sounds/bossScreen.wav" }
+        { id: "bossMusic", src: "assets/sounds/bossScreen.wav" },
+        { id: "coinSound", src: "assets/sounds/coin.wav" }
     ];
 
     // SpriteSheet Data Object
