@@ -6,7 +6,7 @@
     export var INSTRUCTION_STATE: number = 3;
 
     // Game Constants
-    export var WHALE_NUM: number = 3;
+    export var WHALE_NUM: number = 5;
     export var LABEL_FONT = "40px Consolas";
     export var LABEL_COLOUR = "#FFFF00";
     export var TEXT_FONT = "18px Consolas";

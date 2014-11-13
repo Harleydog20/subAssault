@@ -2,7 +2,7 @@
 /// <reference path="../objects/scoreboard.ts" />
 /// <reference path="../objects/sub.ts" />
 /// <reference path="../objects/ocean.ts" />
-/// <reference path="../objects/island.ts" />
+/// <reference path="../objects/coin.ts" />
 /// <reference path="../objects/whale.ts" />
 /// <reference path="../objects/button.ts" />
 /// <reference path="../objects/label.ts" />
@@ -21,7 +21,7 @@ module states {
     }
 
     export function instructionButtonClicked(event: MouseEvent) {
-        //music.stop();
+        music.stop();
         stage.removeChild(game);
         for (var count = 0; count < constants.WHALE_NUM; count++) {
             whales[count].destroy();

@@ -2,12 +2,14 @@
 /// <reference path="../objects/scoreboard.ts" />
 /// <reference path="../objects/sub.ts" />
 /// <reference path="../objects/ocean.ts" />
-/// <reference path="../objects/island.ts" />
+/// <reference path="../objects/coin.ts" />
 /// <reference path="../objects/whale.ts" />
 /// <reference path="../objects/button.ts" />
 /// <reference path="../objects/label.ts" />
 module states {
+    var music;
     export function backButtonClicked(event: MouseEvent) {
+        music.stop();
         stage.removeChild(game);        
         game.removeAllChildren();
         game.removeAllEventListeners();
@@ -28,6 +30,9 @@ module states {
 
         // Instantiate Game Objects
         ocean = new objects.Ocean(stage, game);
+
+        //Add background music
+        music = createjs.Sound.play('startMusic', createjs.Sound.INTERRUPT_NONE, 0, 0, -1, 1, 0);
 
         // Show Cursor
         stage.cursor = "default";

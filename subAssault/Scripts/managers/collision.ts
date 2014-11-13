@@ -1,6 +1,7 @@
 ﻿/// <reference path="../objects/whale.ts" />
-/// <reference path="../objects/island.ts" />
+/// <reference path="../objects/coin.ts" />
 /// <reference path="../objects/sub.ts" />
+/// <reference path="asset.ts" />
 /// <reference path="../objects/scoreboard.ts" />
 
 module managers {
@@ -8,13 +9,13 @@ module managers {
     export class Collision {
         // class variables
         private sub: objects.Sub;
-        private island: objects.Island;
+        private coin: objects.Coin;
         private whales = [];
         private scoreboard: objects.Scoreboard;
 
-        constructor(sub: objects.Sub, island: objects.Island, whales, scoreboard: objects.Scoreboard) {
+        constructor(sub: objects.Sub, coin: objects.Coin, whales, scoreboard: objects.Scoreboard) {
             this.sub = sub;
-            this.island = island;
+            this.coin = coin;
             this.whales = whales;
             this.scoreboard = scoreboard;
         }
@@ -52,18 +53,18 @@ module managers {
         }
 
         // check collision between sub and island
-        private subAndIsland() {
+        private subAndCoin() {
             var p1: createjs.Point = new createjs.Point();
             var p2: createjs.Point = new createjs.Point();
             p1.x = this.sub.image.x;
             p1.y = this.sub.image.y;
             p1.y = this.sub.image.y;
-            p2.x = this.island.image.x;
-            p2.y = this.island.image.y;
-            if (this.distance(p1, p2) < ((this.sub.height / 2) + (this.island.height / 2))) {
+            p2.x = this.coin.image.x;
+            p2.y = this.coin.image.y;
+            if (this.distance(p1, p2) < ((this.sub.height / 2) + (this.coin.height / 2))) {
                 createjs.Sound.play("coinSound");
                 this.scoreboard.score += 100;
-                this.island.reset();
+                this.coin.reset();
             }
         }
 
@@ -72,7 +73,7 @@ module managers {
             for (var count = 0; count < constants.WHALE_NUM; count++) {
                 this.subAndWhale(this.whales[count]);
             }
-            this.subAndIsland();
+            this.subAndCoin();
         }
     }
 } 

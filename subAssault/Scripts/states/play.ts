@@ -1,6 +1,6 @@
 ﻿/// <reference path="../objects/button.ts" />
 /// <reference path="../objects/whale.ts" />
-/// <reference path="../objects/island.ts" />
+/// <reference path="../objects/coin.ts" />
 /// <reference path="../objects/label.ts" />
 /// <reference path="../objects/ocean.ts" />
 /// <reference path="../objects/sub.ts" />
@@ -10,7 +10,7 @@ module states {
     var music;
     export function playState() {
         ocean.update();
-        island.update();
+        coin.update();
         sub.update();
 
         for (var count = 0; count < constants.WHALE_NUM; count++) {
@@ -41,7 +41,7 @@ module states {
 
         // Instantiate Game Objects
         ocean = new objects.Ocean(stage, game);
-        island = new objects.Island(stage, game);
+        coin = new objects.Coin(stage, game);
         sub = new objects.Sub(stage, game);
 
         // Show Cursor
@@ -56,7 +56,7 @@ module states {
         scoreboard = new objects.Scoreboard(stage, game);
 
         // Instantiate Collision Manager
-        collision = new managers.Collision(sub, island, whales, scoreboard);
+        collision = new managers.Collision(sub, coin, whales, scoreboard);
 
         stage.addChild(game);
     }

@@ -2,8 +2,8 @@
 /// <reference path="../constants.ts" />
 
 module objects {
-    // Island Class
-    export class Island {
+    // coin Class
+    export class Coin {
         image: createjs.Sprite;
         stage: createjs.Stage;
         game: createjs.Container;

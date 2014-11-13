@@ -1,11 +1,10 @@
 ﻿/// <reference path="../managers/asset.ts" />
 module objects {
-    // Plane Class
+    // Sub Class
     export class Sub {
         image: createjs.Sprite;
         stage: createjs.Stage;
         game: createjs.Container;
-        //music: createjs.SoundInstance;
         width: number;
         height: number;
         constructor(stage: createjs.Stage, game: createjs.Container) {
@@ -17,7 +16,6 @@ module objects {
             this.image.regX = this.width / 2;
             this.image.regY = this.height / 2;
             game.addChild(this.image);
-            //this.music = createjs.Sound.play('playMusic', createjs.Sound.INTERRUPT_NONE, 0, 0, -1, 1, 0);
         }
 
 
@@ -30,7 +28,6 @@ module objects {
             }            
         }
         destroy() {
-            //this.music.stop();
             game.removeChild(this.image);
         }
     }
