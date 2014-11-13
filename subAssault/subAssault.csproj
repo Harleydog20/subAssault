@@ -68,7 +68,6 @@
     <Content Include="assets\sounds\gameOverScreen.wav" />
     <Content Include="assets\sounds\playScreen.wav" />
     <Content Include="assets\sounds\startScreen.wav" />
-    <Content Include="assets\sounds\yay.ogg" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
