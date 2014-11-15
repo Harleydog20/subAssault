@@ -42,7 +42,15 @@ module states {
         game.addChild(nameLabel);
 
         // Display Instructions
-        instructionLabel = new objects.text(stage.canvas.width / 2, 100, "v");
+        instructionLabel = new objects.text(stage.canvas.width / 2, 100, "Use the mouse to move the submarine and collect");
+        game.addChild(instructionLabel);
+        instructionLabel = new objects.text(stage.canvas.width / 2, 150, "as many coins as you can, but be careful of the");
+        game.addChild(instructionLabel);
+        instructionLabel = new objects.text(stage.canvas.width / 2, 200, "killer whales that guard the coins. If you hit a");
+        game.addChild(instructionLabel);
+        instructionLabel = new objects.text(stage.canvas.width / 2, 250, "killer whale you will lose a life, lose all three");
+        game.addChild(instructionLabel);
+        instructionLabel = new objects.text(stage.canvas.width / 2, 300, "lives and the game is over.");
         game.addChild(instructionLabel);
 
         // Display back Button

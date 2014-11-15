@@ -7,6 +7,7 @@ module objects {
         game: createjs.Container;
         width: number;
         height: number;
+        //Make the sub
         constructor(stage: createjs.Stage, game: createjs.Container) {
             this.stage = stage;
             this.game = game;
@@ -20,6 +21,7 @@ module objects {
 
 
         update() {
+            //Make the sub follow the mouse cursor
             this.image.x = this.stage.mouseX;
             if (this.stage.mouseY <= this.stage.canvas.height - constants.OCEAN_FLOOR) {
                 this.image.y = this.stage.mouseY;
@@ -28,6 +30,7 @@ module objects {
             }            
         }
         destroy() {
+            //remove sub from the screen
             game.removeChild(this.image);
         }
     }

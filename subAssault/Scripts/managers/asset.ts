@@ -1,13 +1,13 @@
 ﻿module managers {
     // Image and Sound Manifest;
     var assetManifest = [
-        { id: "ocean", src: "assets/images/ocean.png" },
-        { id: "startMusic", src: "assets/sounds/startScreen.wav" },
-        { id: "playMusic", src: "assets/sounds/playScreen.wav" },
-        { id: "gameOverMusic", src: "assets/sounds/gameOverScreen.wav" },
-        { id: "bossMusic", src: "assets/sounds/bossScreen.wav" },
-        { id: "coinSound", src: "assets/sounds/coin.wav" },
-        { id: "explosionSound", src: "assets/sounds/Explosion.wav" }
+        { id: "ocean", src: "assets/images/ocean.png" },//Background
+        { id: "startMusic", src: "assets/sounds/startScreen.wav" },//Start Screen soundtrack
+        { id: "playMusic", src: "assets/sounds/playScreen.wav" },//Play Screen soundtrack
+        { id: "gameOverMusic", src: "assets/sounds/gameOverScreen.wav" },//Gameover Screen soundtrack
+        { id: "bossMusic", src: "assets/sounds/bossScreen.wav" },//Not used in this version
+        { id: "coinSound", src: "assets/sounds/coin.wav" },//coin pickup sound
+        { id: "explosionSound", src: "assets/sounds/Explosion.wav" }//enemy hit sound
     ];
 
     // SpriteSheet Data Object
@@ -38,26 +38,28 @@
             [308, 64, 93, 41]
         ],
         "animations": {
-            "Submarine": {
+            "Submarine": {//user's avatar
                 frames: [0,1,2,3],
                 speed: 0.4
             },
-            "coin": {
+            "coin": {//Score +100 when picked up
                 frames: [5,6,7,8,9,10,11,12],
                 speed: 0.4
             },
-            "crystal": {
+            "crystal": {//Not used in this version
                 frames: [13,14,15],
                 speed: 0.1
             },
+            //Button images
             "instructionButton": [16],
             "playButton": [17],
             "tryAgainButton": [18],
-            "whale": {
+            "backButton": [4],
+            "whale": {//enemy to avoid
                 frames: [20, 21, 20, 19],
                 speed: 0.2
-            },
-            "backButton": [4]          
+            }
+                      
         }
        
     }

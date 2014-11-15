@@ -8,6 +8,7 @@ module objects {
         width: number;
         height: number;
         dy: number;
+        //make the background
         constructor(stage: createjs.Stage, game: createjs.Container) {
             this.stage = stage;
             this.game = game;
@@ -15,13 +16,14 @@ module objects {
             this.width = this.image.getBounds().width;
             this.height = this.image.getBounds().height;
             this.reset();
-
+            //set background speed
             this.dy = 5;
 
             game.addChild(this.image);
         }
 
         update() {
+            //Move background, find when it gets to the end of the screen
             this.image.x -= this.dy;
             if (this.image.x <= -(this.width - this.stage.canvas.width)) {
                 this.reset();
@@ -29,10 +31,12 @@ module objects {
         }
 
         reset() {
+            //reset the image when it gets to the edge of the screen
             this.image.x = 0;
         }
 
         destroy() {
+            //remove background from the screen
             game.removeChild(this.image);
         }
     }

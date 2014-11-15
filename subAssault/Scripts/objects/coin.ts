@@ -19,13 +19,14 @@ module objects {
             this.image.regX = this.width / 2;
             this.image.regY = this.height / 2;
             this.reset();
-
+            //set the coin movment speed
             this.dx = 5;
 
             game.addChild(this.image);
         }
 
         update() {
+            //move the image
             this.image.x -= this.dx;
             if (this.image.x < 0 - this.width) {
                 this.reset();
@@ -33,11 +34,13 @@ module objects {
         }
 
         reset() {
+            //reset the image
             this.image.y = Math.floor(Math.random() * (this.stage.canvas.height - constants.OCEAN_FLOOR));
             this.image.x = this.stage.canvas.width + this.width;
         }
 
         destroy() {
+            //remove coin from the screen
             game.removeChild(this.image);
         }
     }

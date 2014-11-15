@@ -11,6 +11,7 @@ module objects {
         height: number;
         dx: number;
         dy: number;
+        //create a whale
         constructor(stage: createjs.Stage, game: createjs.Container) {
             this.stage = stage;
             this.game = game;
@@ -25,6 +26,7 @@ module objects {
         }
 
         update() {
+            //move the whale
             this.image.x -= this.dx;
             this.image.y += this.dy;
             if (this.image.x < 0 - this.width) {
@@ -39,6 +41,7 @@ module objects {
         }
 
         reset() {
+            //reset the whale image
             this.image.y = Math.floor(Math.random() * (this.stage.canvas.height - constants.OCEAN_FLOOR));
             this.dx = Math.floor(Math.random() * 5 + 5);
             this.dy = Math.floor(Math.random() * -3) + Math.floor(Math.random() * 3);
@@ -46,6 +49,7 @@ module objects {
         }
 
         destroy() {
+            //remove the whale from the screen
             game.removeChild(this.image);
         }
     }
